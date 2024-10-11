@@ -1,0 +1,146 @@
+/* CSS Reset  */
+body {
+  color: white;
+  background: url("img/boxing.jpg") no-repeat center center fixed; 
+  background-size: cover; 
+
+  background-repeat: no-repeat;
+  font-family: "Baloo Bhai", sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.left img {
+  width: 92px;
+  border-radius: 8px;
+}
+
+.left {
+  align-items: center;
+}
+
+.mid {
+  flex-grow: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+ul.navbar li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+ul.navbar li a:hover {
+  background-color: grey;
+}
+
+/* Right buttons */
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.btn,
+.btn2 {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover,
+.btn2:hover {
+  background-color: gray;
+}
+
+/* Container styles */
+.container {
+  margin: 50px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  border: 2px solid black;
+  border-radius: 14px;
+  box-shadow: 10px 10px 3px black;
+  text-align: center;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: "Baloo Bhai", sans-serif;
+  transition: width 0.25s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  width: calc(100% - 10px);
+  font-size: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin: 5px 0;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn,
+  .btn2 {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
